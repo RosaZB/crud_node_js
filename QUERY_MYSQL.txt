@@ -1,0 +1,33 @@
+create database prueba;
+use prueba;
+
+create table persona(
+	codigo int,
+    nombre varchar(30),
+    apellido varchar(50)
+);
+
+insert into persona(codigo, nombre, apellido)
+values (1, 'Maria','Moreno');
+select * from persona;
+
+create database crud_nodejs_db;
+use crud_nodejs_db;
+create table users(
+	id int primary key,
+    user varchar(50),
+    rol varchar(50)
+);
+
+insert into users(id, user, rol)
+values (1, 'admin','admin');
+
+select * from users;
+
+ALTER TABLE users MODIFY id INT AUTO_INCREMENT PRIMARY KEY;
+
+ALTER TABLE users DROP PRIMARY KEY;
+ALTER TABLE users MODIFY id INT AUTO_INCREMENT PRIMARY KEY;
+
+
+INSERT INTO users(user, rol) VALUES ('maria', 'admin');
